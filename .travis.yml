@@ -3,13 +3,13 @@ rust:
   - stable
   - beta
 
-#before_script:
+branches:
+  only:
+    - main
+
+      #before_script:
 # - rustup component add rustfmt
 script:
   - cargo build
   - cargo test
 #  - cargo fmt -- --check -
-
-deploy:
-  on:
-    tags: true

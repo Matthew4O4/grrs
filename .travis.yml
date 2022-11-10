@@ -3,6 +3,10 @@ rust:
   - stable
   - beta
 
+notifications:
+  email: false
+
+
 branches:
   only:
     - main

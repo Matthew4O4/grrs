@@ -1,0 +1,25 @@
+[package]
+name = "grre"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+structopt = "0.2.10"
+failure = "0.1.5"
+exitfailure = "0.5.1"
+# log箱子(配有日志级别命名的宏）和一个 适配器(adapter)，也就是把日志输出到有用的地方。日志适配器的功能是很灵活：你想想，不仅可以把日志输出到终端，还可以是syslog，或中央日志服务器。
+env_logger = "0.9.3"
+# 鉴于我们现在只关心编写一个命令行应用，适配器简单用env_logger就好。它的名称叫做env，因它可能使用环境变量，来指定你命令行想要记录的部分。（当然，还有日志的级别）它会有一个时间戳和来自哪个模块，帮你前缀化你的信息，也可以简单配置日志的输出。
+log = "0.4.17"
+
+
+
+[dev-dependencies]
+# 它有一堆整洁的助手，允许我们运行我们的主要二进制文件，并查看它的行为。
+assert_cmd = "0.10"
+# 有助于assert_cmd的断言测试（并且有很大的错误消息）。
+predicates = "1"
+# 创建这些个临时文件
+tempfile = "3"
